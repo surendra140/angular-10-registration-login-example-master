@@ -13,37 +13,61 @@ export class HomeComponent {
         this.user = this.accountService.userValue;
     }
 
-    productArray = [
+    BookArray = [
         {
           prodId: 1,
           img: "https://covers.zlibcdn2.com/covers299/books/7a/09/81/7a0981972454dd0a9de9cfa171c9da47.jpg",
-          amt: 400,
-          qnt: 2,
+          title: "English Vocublery",
+          desc: "English vocabulary in used",
         },
         {
           prodId: 2,
           img: "https://covers.zlibcdn2.com/covers299/books/70/32/d8/7032d82ffdc013053cb5ba5e04c8bc74.jpg",
-          amt: 500,
-          qnt: 4,
+          title: "Rich DAD",
+          desc: "Rich Dad Poor Dad",
         },
         {
           prodId: 3,
           img: "https://covers.zlibcdn2.com/covers299/books/ae/d2/11/aed211bf01bb707e690cc9ad10d78840.jpg",
-          amt: 600,
-          qnt: 5,
+          title: "A Little Life",
+          desc: "Hanya Vanagihara",
         },
         {
           prodId: 4,
           img: "https://covers.zlibcdn2.com/covers299/books/a7/56/86/a7568672f574017378f0ff9814108772.jpg",
-          amt: 700,
-          qnt: 9,
+          title: "Red Queen",
+          desc:"Victoria Aveyard",
+        },
+        {
+          prodId: 5,
+          img: "https://covers.zlibcdn2.com/covers299/books/7a/09/81/7a0981972454dd0a9de9cfa171c9da47.jpg",
+          title: "English Vocublery",
+          desc: "English vocabulary in used",
+        },
+        {
+          prodId: 6,
+          img: "https://covers.zlibcdn2.com/covers299/books/70/32/d8/7032d82ffdc013053cb5ba5e04c8bc74.jpg",
+          title: "Rich DAD",
+          desc: "Rich Dad Poor Dad",
+        },
+        {
+          prodId: 7,
+          img: "https://covers.zlibcdn2.com/covers299/books/ae/d2/11/aed211bf01bb707e690cc9ad10d78840.jpg",
+          title: "A Little Life",
+          desc: "Hanya Vanagihara",
+        },
+        {
+          prodId: 8,
+          img: "https://covers.zlibcdn2.com/covers299/books/a7/56/86/a7568672f574017378f0ff9814108772.jpg",
+          title: "Red Queen",
+          desc:"Victoria Aveyard",
         }
       ]
 
       itemsCart:any =[]; 
 
   //add to wishlist
-  addCart(prod:any){
+  addWishlist(prod:any){
       
        // this.bookArray.push(prod);
        // console.log(this.bookArray);
@@ -66,7 +90,7 @@ export class HomeComponent {
         }   
   }
 
-  completeCart:any = [];
+    completeCart:any = [];
   //add to completelist
    addComplete(prod:any){
     
@@ -78,8 +102,8 @@ export class HomeComponent {
           localStorage.setItem('localList', JSON.stringify(storeDataGet));
         }
         else{
-          let index:number = localStorage.length
-          if(index == 1){
+          let index:number = -1;
+          if(index == -1){
             this.completeCart.push(prod);
             localStorage.setItem('localList',JSON.stringify(this.completeCart));
           }

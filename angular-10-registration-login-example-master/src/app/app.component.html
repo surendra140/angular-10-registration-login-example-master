@@ -4,7 +4,7 @@
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
         <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Wishlist</a>
-        <a class="nav-item nav-link" routerLink="/completelist" routerLinkActive="active">completelist</a>
+        <a class="nav-item nav-link" routerLink="/completelist" routerLinkActive="active">CompletedBook</a>
         
         <a class="nav-item nav-link" (click)="logout()">Logout</a>
     </div>
@@ -13,7 +13,6 @@
 <!-- main app container -->
 <div class="app-container" [ngClass]="{ 'bg-light': user }">
     <alert></alert>
-
     <router-outlet></router-outlet>
 </div>
 

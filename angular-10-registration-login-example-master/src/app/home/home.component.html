@@ -1,18 +1,19 @@
 ﻿<div class="p-4">
     <div class="container">
-        <h1>Hi {{user.firstName}}!</h1>
+        <h3>Hi {{user.firstName}}!</h3>
     </div>
 </div>
 
 <div class="container">
     <section >
-        <div class="row">
-            <div class="col-sm-3" *ngFor="let prod of productArray ">
+        <h5>All Books</h5>
+        <div class="row">  
+            <div class="col-sm-3" *ngFor="let prod of BookArray ">
                  <img src="{{prod.img}}" alt="">
-                 <h3>{{prod.amt}}</h3>
-                 <h4>{{prod.qnt}}</h4>
+                 <h3>{{prod.title}}</h3>
+                 <h4>{{prod.desc}}</h4>
               <div>
-                 <button type="button" (click)="addCart(prod)">Wishlist</button>
+                 <button type="button" (click)="addWishlist(prod)">Wishlist</button>
                  <button type="button" (click)="addComplete(prod)">Completelist</button>
                 </div>
             </div>

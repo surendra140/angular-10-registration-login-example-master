@@ -10,11 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
-import { HomeComponent } from './home';;
-import { HeaderComponent } from './header/header.component'
-;
+import { HomeComponent } from './home';
 
-;
+
 import { CompletelistComponent } from './completelist/completelist.component';
 
 @NgModule({
@@ -27,10 +25,7 @@ import { CompletelistComponent } from './completelist/completelist.component';
     declarations: [
         AppComponent,
         AlertComponent,
-        HomeComponent
-,
-        HeaderComponent ,
-       
+        HomeComponent,
         CompletelistComponent  ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -6,7 +6,7 @@
     
 }
 .container{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .col-sm-3{
     border: 1px solid rebeccapurple;
@@ -20,7 +20,7 @@
     height: 30px;
     width: 110px;
     border-radius: 3px;
-    border-color: rgb(12, 12, 11);
+    border-color: rgb(131, 127, 135);
 }
 .col-sm-3 h3{
     font-size: 20px;
@@ -28,7 +28,13 @@
     
 }
 .col-sm-3 h4{
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     font-weight: 500;
+}
+
+.row{
+   
+   justify-content: center;
+   align-items: center;
 }
