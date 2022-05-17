@@ -1,0 +1,26 @@
+.row img{
+    padding: 5px;
+    width: 250px;
+    height: 230px;
+    border-radius: 5px;
+    
+}
+.container{
+    margin-left: 10px;
+}
+.col-sm-3{
+    border: 1px solid rebeccapurple;
+    margin: 20px;
+    border-radius: 5px; 
+}
+
+.col-sm-3 h3{
+    font-size: 20px;
+    text-align: center;
+    
+}
+.col-sm-3 h4{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+}

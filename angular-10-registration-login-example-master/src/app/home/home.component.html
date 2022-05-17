@@ -1,0 +1,22 @@
+﻿<div class="p-4">
+    <div class="container">
+        <h1>Hi {{user.firstName}}!</h1>
+    </div>
+</div>
+
+<div class="container">
+    <section >
+        <div class="row">
+            <div class="col-sm-3" *ngFor="let prod of productArray ">
+                 <img src="{{prod.img}}" alt="">
+                 <h3>{{prod.amt}}</h3>
+                 <h4>{{prod.qnt}}</h4>
+              <div>
+                 <button type="button" (click)="addCart(prod)">Wishlist</button>
+                 <button type="button" (click)="addComplete(prod)">Completelist</button>
+                </div>
+            </div>
+        </div>
+     
+     </section>
+</div>
